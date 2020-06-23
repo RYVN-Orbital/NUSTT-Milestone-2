@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">My First Application</string>
+    <string name="NUSTT_text">NUSTT</string>
+    <string name="welcome_button">Welcome</string>
+    <string name="quote_text">New Sem, New You.</string>
+    <string name="my_modules_border">MY MODULES</string>
+    <string name="edit_button">Edit</string>
+    <string name="close_edit_button">Close Edit</string>
+    <string name="view_Timetable_button">VIEW TIMETABLE</string>
+    <string name="generate_Timetable_button">GENERATE TIMETABLE</string>
+    <string name="add_modules_button">Module</string>
+    <string name="my_timetable_border">MY TIMETABLE</string>
+    <string name="oops_text">Oops!</string>
+    <string name="no_timetable_warning">You have not generated your timetable.</string>
+    <string name="criteria_text">Criteria</string>
+    <string name="specific_lesson_text">Specific Lesson</string>
+    <string name="lesson_type_text">Type</string>
+    <string name="time_and_venue_text">Time/Venue</string>
+    <string name="refine_criteria_button">REFINE CRITERIA</string>
+    <string name="no_ideal_warning">No ideal timetable found!</string>
+
+
+    <string-array name="criteria">
+        <item>Least Number of Working Days</item>
+        <item>Preferred Time Of Lessons -- Early</item>
+        <item>Preferred Time Of Lessons -- Late</item>
+    </string-array>
+</resources>
