@@ -47,9 +47,9 @@ public class EditModules extends AppCompatActivity {
                     Toast.makeText(getBaseContext(), "Input field is Empty", Toast.LENGTH_LONG).show();
                 } else {
                     listOfUserInput.add(getModuleInput);
-                    //ArrayAdapter<String> adapter = new ArrayAdapter<String> (EditModules.this, android.R.layout.simple_list_item_1, listOfUserInput);
+                    ArrayAdapter<String> adapter1 = new ArrayAdapter<String> (EditModules.this, android.R.layout.simple_list_item_1, listOfUserInput);
                     //convert the items in listview to view items
-                    //listOfModules.setAdapter(adapter);
+                    listOfModules.setAdapter(adapter1);
                     ((EditText) findViewById(R.id.addModulesEditText)).setText(" ");
                 }
             }
