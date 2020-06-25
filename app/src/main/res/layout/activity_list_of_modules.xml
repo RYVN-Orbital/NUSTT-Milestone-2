@@ -65,29 +65,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/modulesListTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/NUSTT_text"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/modulesBorderTextView"
-        app:layout_constraintVertical_bias="0.212" />
-
     <ListView
-        android:id="@+id/listOfModulesListView"
-        android:layout_width="349dp"
-        android:layout_height="378dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/modulesListView"
+        android:layout_width="424dp"
+        android:layout_height="405dp"
+        android:background="@color/screenBackground"
+        app:layout_constraintBottom_toTopOf="@+id/viewTimetableButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/modulesBorderTextView"
-        app:layout_constraintVertical_bias="0.536" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

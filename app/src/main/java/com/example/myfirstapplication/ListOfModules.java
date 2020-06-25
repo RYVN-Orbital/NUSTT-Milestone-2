@@ -3,12 +3,17 @@ package com.example.myfirstapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.view.View;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 
 public class ListOfModules extends AppCompatActivity {
-
+    public ListView modulesListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +29,21 @@ public class ListOfModules extends AppCompatActivity {
                 startActivity(editModules);
             }
         });
+        //creates the list of modules to be displayed in listview and adds modules
+        ArrayList<String> modulesList = new ArrayList<>();
+        for (int i = 0; i <EditModules.listOfUserInput.size(); i++) {
+            modulesList.add(EditModules.listOfUserInput.get(i));
+        }
 
+        //creates arrayadapter
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, modulesList);
+        modulesListView = (ListView) findViewById(R.id.modulesListView);
+        modulesListView.setAdapter(adapter);
+        /*
+        modulesList = (TextView) findViewById(R.id.modulesListTextView);
+        modulesList.setText(EditModules.listOfModules.toString());
+
+*/
         // view timetable button to view current timetable
         Button viewTimetableButton = (Button) findViewById(R.id.viewTimetableButton);
         viewTimetableButton.setOnClickListener(new View.OnClickListener() {

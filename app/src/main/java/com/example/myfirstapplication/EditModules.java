@@ -15,7 +15,8 @@ import java.util.ArrayList;
 
 public class EditModules extends AppCompatActivity {
     public static ArrayList<String> listOfUserInput = new ArrayList<String>();
-
+    public EditText addModulesEditText;
+    public static ListView listOfModules;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +32,8 @@ public class EditModules extends AppCompatActivity {
             }
         });
 
-        final EditText addModulesEditText = (EditText) findViewById(R.id.addModulesEditText);
-        final ListView listOfModules = (ListView) findViewById(R.id.listOfModulesTV);
+        addModulesEditText = (EditText) findViewById(R.id.addModulesEditText);
+        listOfModules = (ListView) findViewById(R.id.listOfModulesTV);
         //plus button to add modules
         Button plusButton = (Button) findViewById(R.id.plusButton);
         plusButton.setOnClickListener(new View.OnClickListener() {
@@ -46,9 +47,9 @@ public class EditModules extends AppCompatActivity {
                     Toast.makeText(getBaseContext(), "Input field is Empty", Toast.LENGTH_LONG).show();
                 } else {
                     listOfUserInput.add(getModuleInput);
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String> (EditModules.this, android.R.layout.simple_list_item_1, listOfUserInput);
+                    //ArrayAdapter<String> adapter = new ArrayAdapter<String> (EditModules.this, android.R.layout.simple_list_item_1, listOfUserInput);
                     //convert the items in listview to view items
-                    listOfModules.setAdapter(adapter);
+                    //listOfModules.setAdapter(adapter);
                     ((EditText) findViewById(R.id.addModulesEditText)).setText(" ");
                 }
             }
