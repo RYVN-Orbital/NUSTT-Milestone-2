@@ -15,7 +15,7 @@
     <string name="criteria_text">Criteria</string>
     <string name="specific_lesson_text">Specific Lesson</string>
     <string name="lesson_type_text">Type</string>
-    <string name="time_and_venue_text">Time/Venue</string>
+    <string name="lesson_number_text">Lesson Code</string>
     <string name="refine_criteria_button">REFINE CRITERIA</string>
     <string name="no_ideal_warning">No ideal timetable found!</string>
 

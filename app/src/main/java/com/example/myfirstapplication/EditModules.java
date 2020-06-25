@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-
 public class EditModules extends AppCompatActivity {
     public static ArrayList<String> listOfUserInput = new ArrayList<String>();
 

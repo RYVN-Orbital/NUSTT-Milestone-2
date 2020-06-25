@@ -49,7 +49,7 @@ class Schedule {
                 //included = true suggests that the lesson list is added to either fixedLectures or notFixedLectures
                 boolean included = false;
                 for (int i = 1; i < allLesson.size(); ++ i) {
-                    if (allLesson.getAllTimings().get(i).getNum() != lessonCode) {
+                    if (!allLesson.getAllTimings().get(i).getNum().equals(lessonCode)) {
                         notFixedLessons.add(allLesson);
                         included = true;
                         break;
@@ -115,7 +115,7 @@ class Schedule {
             //getAlltimings == possibleTime() cuz alr filtered in lesson Sim
             for (Lesson newLesson : listLessons.getAllTimings()) {
                 if (hasAdded) { //ensure that we have included all the lectures w the same lesson code
-                    if (lessonNum == newLesson.getNum()) {
+                    if (lessonNum.equals(newLesson.getNum())) {
                         if (this.timetable.check(newLesson)) {
                             this.timetable.add(newLesson);
                         } else { //timing coincides
@@ -143,7 +143,7 @@ class Schedule {
             if (! hasAdded) {
                 for (AllLesson ogLesson : this.listOfLessons) {
                     boolean added = false;
-                    if (ogLesson.getCode() == listLessons.getCode()) {
+                    if (ogLesson.getCode().equals(listLessons.getCode())) {
                         if (!ogLesson.getIsGrouped()) {
                             for (Lesson lesson : ogLesson.getAllTimings()) {
                                 if (this.timetable.check(lesson)) {
@@ -161,7 +161,7 @@ class Schedule {
                             Lesson addLesson = null;
                             for (Lesson lesson : ogLesson.getAllTimings()) {
                                 if (added) {
-                                    if (lesson.getNum() == addLesson.getNum()) {
+                                    if (lesson.getNum().equals(addLesson.getNum())) {
                                         if (this.timetable.check(lesson)) {
                                             this.timetable.add(lesson);
                                         } else {

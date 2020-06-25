@@ -57,6 +57,7 @@
         android:layout_height="106dp"
         android:background="@drawable/moduleborder"
         android:text="@string/my_modules_border"
+        android:gravity="center"
         android:textAllCaps="true"
         android:textColor="@color/pink"
         android:textSize="48sp"

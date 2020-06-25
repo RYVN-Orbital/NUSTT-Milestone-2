@@ -27,17 +27,17 @@ public /*abstract*/ class Lesson {
         this.listOfWeeks = weeks;
 
         /*New 1*/
-        if (day == "Monday") {
+        if (day.equals("Monday")) {
             this.dayOfTheWeek = 1;
-        } else if (day == "Tuesday") {
+        } else if (day.equals("Tuesday")) {
             this.dayOfTheWeek = 2;
-        } else if (day == "Wednesday") {
+        } else if (day.equals("Wednesday")) {
             this.dayOfTheWeek = 3;
-        } else if (day == "Thursday") {
+        } else if (day.equals("Thursday")) {
             this.dayOfTheWeek = 4;
-        } else if (day == "Friday") {
+        } else if (day.equals("Friday")) {
             this.dayOfTheWeek = 5;
-        } else if (day == "Saturday") {
+        } else if (day.equals("Saturday")) {
             this.dayOfTheWeek = 6;
         } else {
             this.dayOfTheWeek = 7;
@@ -45,15 +45,15 @@ public /*abstract*/ class Lesson {
         /*New 1*/
 
         /*New 2*/
-        if (typeOfLesson == "Sectional Teaching") {
+        if (typeOfLesson.equals("Sectional Teaching")) {
             this.lessonType = Type.SECTIONAL;
-        } else if (typeOfLesson == "Lecture") {
+        } else if (typeOfLesson.equals("Lecture")) {
             this.lessonType = Type.LECTURE;
-        } else if (typeOfLesson == "Recitation") {
+        } else if (typeOfLesson.equals("Recitation")) {
             this.lessonType = Type.RECITATION;
-        } else if (typeOfLesson == "Tutorial") {
+        } else if (typeOfLesson.equals("Tutorial")) {
             this.lessonType = Type.TUTORIAL;
-        } else if (typeOfLesson == "Laboratory") {
+        } else if (typeOfLesson.equals("Laboratory")) {
             this.lessonType = Type.LAB;
         } else {	//error
             this.lessonType = null;
@@ -142,7 +142,5 @@ public /*abstract*/ class Lesson {
                 this.moduleCode + " " + this.lessonNum + " " + this.venue + " " + this.listOfWeeks;
     }
 }
-
-
 
 

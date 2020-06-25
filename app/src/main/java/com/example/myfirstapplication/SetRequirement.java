@@ -9,6 +9,7 @@ import android.os.Looper;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,9 @@ public class SetRequirement extends AppCompatActivity {
     //public static Timetable confirmedTT;
     //generatettbutton will kick start the thread
     Button generateTTButton;
+    public static EditText modEditText;
+    public static EditText typeOfLessonEditText;
+    public static EditText lessonCodeEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,9 @@ public class SetRequirement extends AppCompatActivity {
 
         //generateTTButton will direct us to view timetable class and generate timetable
         generateTTButton = (Button) findViewById(R.id.generateButton);
+        modEditText = (EditText) findViewById(R.id.modEditText);
+        typeOfLessonEditText = (EditText) findViewById(R.id.typeEditText);
+        lessonCodeEditText = (EditText) findViewById(R.id.lessonCodeEditText);
 
         generateTTButton.setOnClickListener(new View.OnClickListener() {
             @Override

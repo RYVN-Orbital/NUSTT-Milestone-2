@@ -17,7 +17,7 @@ class AllLesson {
 
         if (this.allTimings.size() > 1) {
             //remove 1 condition
-            if (this.allTimings.get(0).getNum() == this.allTimings.get(1).getNum() /*&& this.allTimings.get(0).getWeeks() == this.allTimings.get(1).getWeeks()*/) {
+            if (this.allTimings.get(0).getNum().equals(this.allTimings.get(1).getNum()) /*&& this.allTimings.get(0).getWeeks() == this.allTimings.get(1).getWeeks()*/) {
                 this.isGrouped = true;
             } else {
                 this.isGrouped = false;
@@ -30,6 +30,19 @@ class AllLesson {
     public boolean getIsGrouped() {
         return this.isGrouped;
     }
+
+    //NEW 1
+    public List<Lesson> findLesson(String lessonNum) {
+        List<Lesson> listLesson = new ArrayList<>();
+        for (Lesson lesson : this.allTimings) {
+            if (lesson.getNum().equals(lessonNum)) {
+                listLesson.add(lesson);
+            }
+        }
+        return listLesson;
+    }
+    // NEW 1
+
 
     public static AllLesson deepCopy(AllLesson lesson) {
         List<Lesson> lst = new ArrayList<>();

@@ -12,6 +12,7 @@
         android:layout_height="100dp"
         android:background="@color/blue"
         android:text="@string/my_timetable_border"
+        android:gravity="center"
         android:textColor="@color/pink"
         android:textSize="48sp"
         android:textStyle="bold"
@@ -86,11 +87,11 @@
         app:layout_constraintVertical_bias="0.632" />
 
     <EditText
-        android:id="@+id/timeVenueEditText"
+        android:id="@+id/lessonCodeEditText"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/time_and_venue_text"
+        android:hint="@string/lesson_number_text"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

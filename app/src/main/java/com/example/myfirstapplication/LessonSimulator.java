@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-
 public class LessonSimulator {
     //remove all the same day/same time lessons
     private List<AllLesson> listOfLectures = new ArrayList<>();

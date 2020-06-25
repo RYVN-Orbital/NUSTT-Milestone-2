@@ -111,7 +111,7 @@ class FilterFreeDay {
                                 break;
                             } //different lesson number
                         } else { //not included
-                            if (this.freeDay.size() > 1 && currLessonCode != lesson.getNum()) {
+                            if (this.freeDay.size() > 1 && (!currLessonCode.equals(lesson.getNum()))) {
                                 if (this.timetable.check(lesson)) {
                                     removeLesson.add(lesson);
                                     if (this.freeDay.contains(lesson.getDay())) {
@@ -148,3 +148,7 @@ class FilterFreeDay {
         }
     }
 }
+
+
+
+
