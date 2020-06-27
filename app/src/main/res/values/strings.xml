@@ -18,6 +18,7 @@
     <string name="lesson_number_text">Lesson Code</string>
     <string name="refine_criteria_button">REFINE CRITERIA</string>
     <string name="no_ideal_warning">No ideal timetable found!</string>
+    <string name= "generated_msg">Timetable Generated!</string>
 
 
     <string-array name="criteria">

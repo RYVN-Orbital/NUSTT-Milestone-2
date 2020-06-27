@@ -32,7 +32,7 @@ public class Timetable {
         List<List<Lesson>> allLessons = Arrays.asList(monday, tuesday, wednesday, thursday, friday, saturday);
         String str = "";
         for (int i = 0; i < allLessons.size(); i++ ) {
-            str += "\n" + days.get(i);
+            str += "\n"+ "\n" + days.get(i);
             List<Lesson> lessons = allLessons.get(i);
             for (Lesson lesson : lessons) {
                 str += "\n" + lesson;

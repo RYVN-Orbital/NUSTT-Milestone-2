@@ -20,8 +20,8 @@ public class EditModules extends AppCompatActivity {
     public EditText addModulesEditText;
     public static ListView listOfModules;
     public Button plusButton;
-    public EditText removeModulesEditText;
-    public Button deleteButton;
+    //public EditText removeModulesEditText;
+    //public Button deleteButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

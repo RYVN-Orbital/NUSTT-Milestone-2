@@ -6,74 +6,56 @@
     android:layout_height="match_parent"
     tools:context=".NoTimetable">
 
-    <TextView
-        android:id="@+id/myTimetableTextView"
-        android:layout_width="412dp"
-        android:layout_height="100dp"
-        android:background="@color/blue"
-        android:text="@string/my_timetable_border"
-        android:gravity="center"
-        android:textColor="@color/pink"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
     <Button
         android:id="@+id/generateTimetableButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="208dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="160dp"
         android:background="@color/blue"
         android:text="@string/generate_Timetable_button"
         android:textColor="@color/screenBackground"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myTimetableTextView"
-        app:layout_constraintVertical_bias="0.735" />
+        app:layout_constraintTop_toBottomOf="@+id/noTimetableWarningTV"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/noTimetableIcon"
-        android:layout_width="107dp"
-        android:layout_height="107dp"
-        app:layout_constraintBottom_toTopOf="@+id/generateTimetableButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="152dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.433"
         app:srcCompat="@drawable/shocked_icon" />
 
     <TextView
         android:id="@+id/oopsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/oops_text"
         android:textColor="@color/purple"
-        android:textSize="30sp"
+        android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/noTimetableIcon"
-        app:layout_constraintVertical_bias="0.047" />
+        app:layout_constraintTop_toBottomOf="@+id/noTimetableIcon" />
 
     <TextView
         android:id="@+id/noTimetableWarningTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="362dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
         android:text="@string/no_timetable_warning"
         android:textColor="@color/purple"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.512" />
+        app:layout_constraintTop_toBottomOf="@+id/oopsTextView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

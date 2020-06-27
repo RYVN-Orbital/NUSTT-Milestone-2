@@ -11,19 +11,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NoIdealTimetable"></activity>
-        <activity android:name=".ViewTimetable" />
-        <activity android:name=".SetRequirement" />
-        <activity android:name=".NoTimetable" />
-        <activity android:name=".ListOfModules" />
-        <activity android:name=".EditModules" />
-        <activity android:name="com.example.myfirstapplication.MainActivity">
+        <activity android:name=".NoIdealTimetable"
+            android:label="My Timetable"/>
+        <activity android:name=".ViewTimetable"
+            android:label="My Timetable"/>
+        <activity android:name=".SetRequirement"
+            android:label="My Timetable"/>
+        <activity android:name=".NoTimetable"
+            android:label="My Timetable"/>
+        <activity android:name=".ListOfModules"
+            android:label="My Modules"/>
+        <activity android:name=".EditModules"
+            android:windowSoftInputMode="adjustPan"
+            android:label="My Modules"/>
+        <activity android:name="com.example.myfirstapplication.MainActivity"
+            android:label="NUSTT">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

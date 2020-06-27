@@ -8,73 +8,57 @@
 
     <Button
         android:id="@+id/generateTimetableButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="171dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="30dp"
         android:background="@color/blue"
         android:text="@string/generate_Timetable_button"
         android:textColor="@color/screenBackground"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.548"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95" />
+        app:layout_constraintTop_toBottomOf="@+id/viewTimetableButton"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/viewTimetableButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="131dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
         android:background="@color/blue"
         android:text="@string/view_Timetable_button"
         android:textColor="@color/screenBackground"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.853" />
+        app:layout_constraintTop_toBottomOf="@+id/modulesListView" />
 
     <Button
         android:id="@+id/editButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="77dp"
+        android:layout_height="36dp"
         android:background="@color/blue"
         android:text="@string/edit_button"
         android:textColor="@color/pink"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintHorizontal_bias="0.949"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.184" />
-
-    <TextView
-        android:id="@+id/modulesBorderTextView"
-        android:layout_width="412dp"
-        android:layout_height="106dp"
-        android:background="@drawable/moduleborder"
-        android:text="@string/my_modules_border"
-        android:gravity="center"
-        android:textAllCaps="true"
-        android:textColor="@color/pink"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.024" />
 
     <ListView
         android:id="@+id/modulesListView"
-        android:layout_width="424dp"
-        android:layout_height="405dp"
+        android:layout_width="375dp"
+        android:layout_height="443dp"
+        android:layout_marginTop="65dp"
         android:background="@color/screenBackground"
-        app:layout_constraintBottom_toTopOf="@+id/viewTimetableButton"
+        android:cacheColorHint="@color/screenBackground"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/modulesBorderTextView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
