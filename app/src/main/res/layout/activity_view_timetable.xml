@@ -13,7 +13,7 @@
         android:fontFamily="sans-serif-medium"
         android:text="@string/generated_msg"
         android:textColor="@color/blue"
-        android:textSize="14sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

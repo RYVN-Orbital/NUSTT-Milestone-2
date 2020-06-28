@@ -20,14 +20,16 @@ public class SetRequirement extends AppCompatActivity {
     //generatettbutton will kick start the thread
     Button generateTTButton;
     public static EditText modEditText;
-    public static EditText typeOfLessonEditText;
+    //public static EditText typeOfLessonEditText;
     public static EditText lessonCodeEditText;
+    public static Spinner typeSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_requirement);
 
+        //dropdown for criteria
         Spinner criteriaSpinner = (Spinner) findViewById(R.id.criteriaSpinner);
         ArrayAdapter<String> criteriaAdapter = new ArrayAdapter<String>(SetRequirement.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.criteria));
@@ -35,10 +37,18 @@ public class SetRequirement extends AppCompatActivity {
         criteriaAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         criteriaSpinner.setAdapter(criteriaAdapter);
 
+        //dropdown for type of lesson
+        typeSpinner = (Spinner) findViewById(R.id.typeSpinner);
+        ArrayAdapter<String> typeAdapter = new ArrayAdapter<String>(SetRequirement.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.typeOfLesson));
+
+        typeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        typeSpinner.setAdapter(typeAdapter);
+
         //generateTTButton will direct us to view timetable class and generate timetable
         generateTTButton = (Button) findViewById(R.id.generateButton);
         modEditText = (EditText) findViewById(R.id.modEditText);
-        typeOfLessonEditText = (EditText) findViewById(R.id.typeEditText);
+        //typeOfLessonEditText = (EditText) findViewById(R.id.typeEditText);
         lessonCodeEditText = (EditText) findViewById(R.id.lessonCodeEditText);
 
         generateTTButton.setOnClickListener(new View.OnClickListener() {

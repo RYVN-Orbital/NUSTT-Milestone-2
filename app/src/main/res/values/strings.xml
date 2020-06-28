@@ -18,12 +18,20 @@
     <string name="lesson_number_text">Lesson Code</string>
     <string name="refine_criteria_button">REFINE CRITERIA</string>
     <string name="no_ideal_warning">No ideal timetable found!</string>
-    <string name= "generated_msg">Timetable Generated!</string>
-
+    <string name="generated_msg">Timetable Generated!</string>
+    <string name="invalid_mods">Modules are invalid!</string>
+    <string name="refine_modules_button">REFINE MODULES</string>
+    <string name="invalid_lesson_text">Lesson cannot be found!</string>
+    <string name="refine_condition_button">REFINE CONDITION</string>
 
     <string-array name="criteria">
         <item>Least Number of Working Days</item>
-        <item>Preferred Time Of Lessons -- Early</item>
-        <item>Preferred Time Of Lessons -- Late</item>
+    </string-array>
+
+    <string-array name="typeOfLesson">
+        <item>Lecture</item>
+        <item>Tutorial</item>
+        <item>Recitation</item>
+        <item>Sectional</item>
     </string-array>
 </resources>

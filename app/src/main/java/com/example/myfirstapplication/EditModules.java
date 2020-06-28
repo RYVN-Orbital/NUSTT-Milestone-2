@@ -87,51 +87,5 @@ public class EditModules extends AppCompatActivity {
     }
 }
 
-        /*
-        listOfModules.setAdapter(adapter1);
-        plusButton.setOnClickListener(new View.OnClickListener() {
-                                          @Override
-                                          public void onClick(View v) {
-                                              String getModuleInput = addModulesEditText.getText().toString();
-
-                                              if (listOfUserInput.contains(getModuleInput)) {
-                                                  Toast.makeText(getBaseContext(), "Module already added", Toast.LENGTH_LONG).show();
-                                              } else if (getModuleInput == null || getModuleInput.trim().equals("")) {
-                                                  Toast.makeText(getBaseContext(), "Input field is Empty", Toast.LENGTH_LONG).show();
-                                              } else {
-                                                  listOfUserInput.add(getModuleInput);
-                                                  ((EditText) findViewById(R.id.addModulesEditText)).setText(" ");
-                                                  //convert the items in listview to view items
-                                                  adapter1.notifyDataSetChanged();
-                                              }
-                                          }
-                                      });
-
-         */
-
-
-        //delete button to remove modules
-        /*
-        removeModulesEditText = (EditText) findViewById(R.id.removeModEditText);
-        deleteButton = (Button) findViewById(R.id.removeModsBtn);
-        deleteButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String moduleToBeRemoved = removeModulesEditText.getText().toString();
-                //remove this module from the current list
-                listOfUserInput.remove(moduleToBeRemoved);
-                //method notifies the attached observers that the underlying
-                //data has been changed and any View reflecting the data set should refresh itself
-                adapter1.notifyDataSetChanged();
-                //((EditText) findViewById(R.id.removeModEditText)).setText(" ");
-                }
-            });
-
-        //Intent intentToDisplayMod = new Intent(getApplicationContext(), ListOfModules.class);
-        //intentToDisplayMod.putExtra("message", module);
-        //startActivity(intentToDisplayMod);
-*/
-
-
 
 

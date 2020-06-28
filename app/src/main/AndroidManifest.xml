@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myfirstapplication">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,20 +11,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NoIdealTimetable"
-            android:label="My Timetable"/>
-        <activity android:name=".ViewTimetable"
-            android:label="My Timetable"/>
-        <activity android:name=".SetRequirement"
-            android:label="My Timetable"/>
-        <activity android:name=".NoTimetable"
-            android:label="My Timetable"/>
-        <activity android:name=".ListOfModules"
-            android:label="My Modules"/>
-        <activity android:name=".EditModules"
-            android:windowSoftInputMode="adjustPan"
-            android:label="My Modules"/>
-        <activity android:name="com.example.myfirstapplication.MainActivity"
+        <activity android:name=".LessonNotFoundError"></activity>
+        <activity android:name=".NullModuleError" />
+        <activity
+            android:name=".ErrorTimetable"
+            android:label="My Timetable" />
+        <activity
+            android:name=".ViewTimetable"
+            android:label="My Timetable" />
+        <activity
+            android:name=".SetRequirement"
+            android:label="My Timetable" />
+        <activity
+            android:name=".NoTimetable"
+            android:label="My Timetable" />
+        <activity
+            android:name=".ListOfModules"
+            android:label="My Modules" />
+        <activity
+            android:name=".EditModules"
+            android:label="My Modules"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".MainActivity"
             android:label="NUSTT">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +41,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

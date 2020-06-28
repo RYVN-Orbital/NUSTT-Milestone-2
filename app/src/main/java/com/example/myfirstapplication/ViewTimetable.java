@@ -1,15 +1,19 @@
 package com.example.myfirstapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Spinner;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.lang.Runnable;
+import java.util.Set;
 
 public class ViewTimetable extends AppCompatActivity {
     public static Timetable confirmedTT;
@@ -41,7 +45,7 @@ public class ViewTimetable extends AppCompatActivity {
             //get information from the prev activity
             String conditionLessonModuleCode = SetRequirement.modEditText.getText().toString();
             String conditionLessonNum = SetRequirement.lessonCodeEditText.getText().toString();
-            String conditionLessonType = SetRequirement.typeOfLessonEditText.getText().toString();
+            String conditionLessonType = SetRequirement.typeSpinner.getSelectedItem().toString();
 
             Module[] modulesTaking = new Module[numberOfModules];
             List<AllLesson> listOfLectures = new ArrayList<>();
@@ -61,7 +65,10 @@ public class ViewTimetable extends AppCompatActivity {
 
                 if (newModule == null) {
                     hasError = true;
-                    System.out.println("Null Module Error");
+                    //System.out.println("Null Module Error");
+                    //cant find module
+                    Intent errorTT = new Intent(getApplicationContext(), NullModuleError.class);
+                    startActivity(errorTT);
                     break;
                 } else {
                     modulesTaking[i] = newModule;
@@ -71,7 +78,10 @@ public class ViewTimetable extends AppCompatActivity {
                         List<Lesson> conditionLesson = newModule.getLesson(conditionLessonNum, conditionLessonType);
                         if (conditionLesson.isEmpty()) {
                             hasError = true;
-                            System.out.println("Error");
+                            //System.out.println("Error");
+                            //cant find lesson
+                            Intent errorTT = new Intent(getApplicationContext(), LessonNotFoundError.class);
+                            startActivity(errorTT);
                             break;
                         } else {
                             for (Lesson lesson : conditionLesson) {
@@ -79,7 +89,10 @@ public class ViewTimetable extends AppCompatActivity {
                                     tt.add(lesson);
                                 } else {
                                     hasError = true;
-                                    System.out.println("Error");
+                                    //System.out.println("Error");
+                                    //if the lesson cant be added to the tt
+                                    Intent errorTT = new Intent(getApplicationContext(), ErrorTimetable.class);
+                                    startActivity(errorTT);
                                     break;
                                 }
                             }
@@ -130,14 +143,10 @@ public class ViewTimetable extends AppCompatActivity {
                         }
                     });
                 } else {
-                    //System.out.println(confirmedTT);
+                    //error: cannot print timetable
                     System.out.println("Error");
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            timetableTextView.setText(confirmedTT.toString());
-                        }
-                    });
+                    Intent errorTT = new Intent(getApplicationContext(), ErrorTimetable.class);
+                    startActivity(errorTT);
                 }
             }
         }

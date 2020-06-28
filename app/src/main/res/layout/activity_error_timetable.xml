@@ -4,28 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NoIdealTimetable">
-
-    <Button
-        android:id="@+id/refineCriteriaButton"
-        android:layout_width="180dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="160dp"
-        android:background="@color/blue"
-        android:text="@string/refine_criteria_button"
-        android:textColor="@color/screenBackground"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/noIdealTextview"
-        app:layout_constraintVertical_bias="1.0" />
+    tools:context=".ErrorTimetable">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/noTimetableIcon2"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="152dp"
@@ -35,29 +17,48 @@
         app:srcCompat="@drawable/shocked_icon" />
 
     <TextView
-        android:id="@+id/oopsTextView"
+        android:id="@+id/oopsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="39dp"
         android:text="@string/oops_text"
         android:textColor="@color/purple"
         android:textSize="34sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/noTimetableIcon2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/noIdealTextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="@string/no_ideal_warning"
         android:textColor="@color/purple"
-        android:textSize="23sp"
+        android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/oopsTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/oopsText"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <Button
+        android:id="@+id/refineButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:background="@color/blue"
+        android:text="@string/refine_criteria_button"
+        android:textColor="@color/pink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noIdealTextview"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
