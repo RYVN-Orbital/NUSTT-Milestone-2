@@ -32,6 +32,7 @@
         <item>Lecture</item>
         <item>Tutorial</item>
         <item>Recitation</item>
-        <item>Sectional</item>
+        <item>Laboratory</item>
+        <item>Sectional Teaching</item>
     </string-array>
 </resources>
