@@ -10,7 +10,6 @@
         android:id="@+id/generateTimetableButton"
         android:layout_width="171dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="30dp"
         android:background="@color/blue"
         android:text="@string/generate_Timetable_button"
@@ -18,22 +17,20 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewTimetableButton"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/viewTimetableButton"
         android:layout_width="131dp"
         android:layout_height="40dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginBottom="16dp"
         android:background="@color/blue"
         android:text="@string/view_Timetable_button"
         android:textColor="@color/pink"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/generateTimetableButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/modulesListView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/editButton"
@@ -52,13 +49,16 @@
 
     <ListView
         android:id="@+id/modulesListView"
-        android:layout_width="375dp"
-        android:layout_height="443dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:layout_marginTop="65dp"
+        android:layout_marginBottom="160dp"
         android:background="@color/screenBackground"
         android:cacheColorHint="@color/screenBackground"
+        app:layout_constraintBottom_toTopOf="@+id/viewTimetableButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
