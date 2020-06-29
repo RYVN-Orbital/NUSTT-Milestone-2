@@ -11,8 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LessonNotFoundError"></activity>
-        <activity android:name=".NullModuleError" />
+        <activity
+            android:name=".LessonNotFoundError"
+            android:label="My Timetable" />
+        <activity
+            android:name=".NullModuleError"
+            android:label="My Timetable" />
         <activity
             android:name=".ErrorTimetable"
             android:label="My Timetable" />

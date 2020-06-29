@@ -138,8 +138,8 @@ public /*abstract*/ class Lesson {
 
     @Override
     public String toString() {
-        return this.day + " " + this.startTime + " " + this.endTime + " " +
-                this.moduleCode + " " + this.lessonNum + " " + this.venue + " " + this.listOfWeeks;
+        return this.startTime + "-" + this.endTime + " " +
+                this.moduleCode + " " + this.lessonNum + " " + this.venue;
     }
 }
 
