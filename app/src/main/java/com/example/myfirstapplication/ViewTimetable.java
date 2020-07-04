@@ -20,6 +20,8 @@ public class ViewTimetable extends AppCompatActivity {
     public TextView timetableTextView;
     public Button viewButton;
     private Handler mainHandler = new Handler();
+    public Button infoButton;
+    public Button editConditionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +29,33 @@ public class ViewTimetable extends AppCompatActivity {
         setContentView(R.layout.activity_view_timetable);
         viewButton = (Button) findViewById(R.id.viewButton);
         timetableTextView = (TextView) findViewById(R.id.timetableTextView);
+
+        //info about the tt
+        infoButton = (Button) findViewById(R.id.infoButton);
+        infoButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent getInfoIntent = new Intent(getApplicationContext(), TimetableInfo.class);
+                startActivity(getInfoIntent);
+            }
+        });
+
+        //edit condition
+        editConditionButton = (Button) findViewById(R.id.editCondBtn);
+        editConditionButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent editCondIntent = new Intent(getApplicationContext(), SetRequirement.class);
+                startActivity(editCondIntent);
+            }
+        });
+
+        //edit modules
+        
     }
+
 
     //background thread of generating the timetable
     public void startThread(View view) {
